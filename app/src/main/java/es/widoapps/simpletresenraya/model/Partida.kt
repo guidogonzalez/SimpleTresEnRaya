@@ -6,11 +6,11 @@ import java.lang.Exception
 
 class Partida {
 
-    var partida = Array(3) { arrayOfNulls<String>(3) }
+    var tablero = Array(3) { arrayOfNulls<String>(3) }
 
     val jugador1: String? = "X"
     val jugador2: String? = "O"
-    var turnoJugadorActual: String? = jugador1;
+    var turnoJugadorActual = jugador1
     var jugadorGanador: MutableLiveData<String?> = MutableLiveData()
 
     fun cambiarTurno() {
@@ -18,7 +18,13 @@ class Partida {
         turnoJugadorActual = if (turnoJugadorActual == jugador1) jugador2 else jugador1
     }
 
-    fun comprobarFinPartida(jugador: String, fil: Int, col: Int): Boolean {
+    fun reiniciarPartida() {
+
+        turnoJugadorActual = jugador1
+        tablero = Array(3) { kotlin.arrayOfNulls<kotlin.String>(3) }
+    }
+
+    fun comprobarFinPartida(jugador: String?, fil: Int, col: Int): Boolean {
 
         if (comprobarHorizontal(jugador, fil) || comprobarVertical(jugador, col) ||
             comprobarDiagonalPrincipal(jugador) || comprobarDiagonalSecundaria(jugador)) {
@@ -42,7 +48,7 @@ class Partida {
 
         try {
 
-            for (fil in partida) {
+            for (fil in tablero) {
 
                 for (col in fil) {
 
@@ -61,13 +67,13 @@ class Partida {
         return true
     }
 
-    fun comprobarHorizontal(jugador: String, fil: Int): Boolean {
+    fun comprobarHorizontal(jugador: String?, fil: Int): Boolean {
 
         try {
 
-            for (i in partida.indices) {
+            for (i in tablero.indices) {
 
-                if (partida[fil][i] != jugador) {
+                if (tablero[fil][i] != jugador) {
 
                     return false
                 }
@@ -81,13 +87,13 @@ class Partida {
         return true
     }
 
-    fun comprobarVertical(jugador: String, col: Int): Boolean {
+    fun comprobarVertical(jugador: String?, col: Int): Boolean {
 
         try {
 
-            for (i in partida.indices) {
+            for (i in tablero.indices) {
 
-                if (partida[i][col] != jugador) {
+                if (tablero[i][col] != jugador) {
 
                     return false
                 }
@@ -101,13 +107,13 @@ class Partida {
         return true
     }
 
-    fun comprobarDiagonalPrincipal(jugador: String): Boolean {
+    fun comprobarDiagonalPrincipal(jugador: String?): Boolean {
 
         try {
 
-            for (i in partida.indices) {
+            for (i in tablero.indices) {
 
-                if (partida[i][i] != jugador) {
+                if (tablero[i][i] != jugador) {
 
                     return false
                 }
@@ -121,13 +127,13 @@ class Partida {
         return true
     }
 
-    fun comprobarDiagonalSecundaria(jugador: String): Boolean {
+    fun comprobarDiagonalSecundaria(jugador: String?): Boolean {
 
         try {
 
-            for (i in partida.indices) {
+            for (i in tablero.indices) {
 
-                if (partida[i][partida.size - 1] != jugador) {
+                if (tablero[i][tablero.size - 1] != jugador) {
 
                     return false
                 }
