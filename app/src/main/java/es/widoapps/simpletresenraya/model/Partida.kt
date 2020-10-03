@@ -21,7 +21,7 @@ class Partida {
     fun reiniciarPartida() {
 
         turnoJugadorActual = jugador1
-        tablero = Array(3) { kotlin.arrayOfNulls<kotlin.String>(3) }
+        tablero = Array(3) { arrayOfNulls<String>(3) }
     }
 
     fun comprobarFinPartida(jugador: String?, fil: Int, col: Int): Boolean {
