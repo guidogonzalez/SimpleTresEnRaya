@@ -14,6 +14,7 @@ class Partida {
     var jugadorGanador: MutableLiveData<String?> = MutableLiveData()
 
     fun cambiarTurno() {
+
         turnoJugadorActual = if (turnoJugadorActual == jugador1) jugador2 else jugador1
     }
 
@@ -66,9 +67,9 @@ class Partida {
 
             for (i in partida.indices) {
 
-                if (partida[fil][i] == jugador) {
+                if (partida[fil][i] != jugador) {
 
-                    return true
+                    return false
                 }
             }
 
@@ -77,7 +78,7 @@ class Partida {
             e.message?.let { Log.d("ERROR: ", it) }
         }
 
-        return false
+        return true
     }
 
     fun comprobarVertical(jugador: String, col: Int): Boolean {
@@ -86,9 +87,9 @@ class Partida {
 
             for (i in partida.indices) {
 
-                if (partida[i][col] == jugador) {
+                if (partida[i][col] != jugador) {
 
-                    return true
+                    return false
                 }
             }
 
@@ -97,7 +98,7 @@ class Partida {
             e.message?.let { Log.d("ERROR: ", it) }
         }
 
-        return false
+        return true
     }
 
     fun comprobarDiagonalPrincipal(jugador: String): Boolean {
@@ -106,9 +107,9 @@ class Partida {
 
             for (i in partida.indices) {
 
-                if (partida[i][i] == jugador) {
+                if (partida[i][i] != jugador) {
 
-                    return true
+                    return false
                 }
             }
 
@@ -117,7 +118,7 @@ class Partida {
             e.message?.let { Log.d("ERROR: ", it) }
         }
 
-        return false
+        return true
     }
 
     fun comprobarDiagonalSecundaria(jugador: String): Boolean {
@@ -126,9 +127,9 @@ class Partida {
 
             for (i in partida.indices) {
 
-                if (partida[i][partida.size - 1] == jugador) {
+                if (partida[i][partida.size - 1] != jugador) {
 
-                    return true
+                    return false
                 }
             }
 
@@ -137,6 +138,6 @@ class Partida {
             e.message?.let { Log.d("ERROR: ", it) }
         }
 
-        return false
+        return true
     }
 }
