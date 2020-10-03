@@ -37,6 +37,5 @@ Simple Tres en Raya está basado en el patrón de diseño MVVM.
 ![arquitectura](https://miro.medium.com/max/2732/1*n8Jzac0o-EXS_3mVCv-qeg.png)
 
 ## Inspirado por
-```xml
+
 [husaynhakeem](https://github.com/husaynhakeem/TicTacToe-MVVM)
-```
