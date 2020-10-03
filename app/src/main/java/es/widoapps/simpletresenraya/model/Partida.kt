@@ -133,7 +133,7 @@ class Partida {
 
             for (i in tablero.indices) {
 
-                if (tablero[i][tablero.size - 1] != jugador) {
+                if (tablero[i][tablero.size - 1 - i] != jugador) {
 
                     return false
                 }
