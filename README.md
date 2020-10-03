@@ -1,4 +1,4 @@
-<h1 align="center">Cocktail</h1>
+<h1 align="center">Simple Tres En Raya</h1>
 
 <p align="center">  
 Simple Tres En Raya es una aplicación de demostración basada en el juego tres en raya para dos jugadores, desarrollada bajo Kotlin y el patrón de diseño MVVM. 
@@ -20,7 +20,7 @@ Clonar el proyecto y compilar
 ## Tecnologías & librerías
 
 - Mínimo SDK level 21
-- Lenguaje Java
+- Lenguaje Kotlin
 - JetPack
   - [LiveData](https://developer.android.com/topic/libraries/architecture/livedata.html) - notifica los cambios a las vistas.
   - Lifecycle - disponer de datos de observación cuando cambie el estado del ciclo de vida.
