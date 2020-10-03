@@ -44,7 +44,7 @@ class Partida {
         return false
     }
 
-    fun comprobarTableroLleno(): Boolean {
+    private fun comprobarTableroLleno(): Boolean {
 
         try {
 
@@ -67,7 +67,7 @@ class Partida {
         return true
     }
 
-    fun comprobarHorizontal(jugador: String?, fil: Int): Boolean {
+    private fun comprobarHorizontal(jugador: String?, fil: Int): Boolean {
 
         try {
 
@@ -87,7 +87,7 @@ class Partida {
         return true
     }
 
-    fun comprobarVertical(jugador: String?, col: Int): Boolean {
+    private fun comprobarVertical(jugador: String?, col: Int): Boolean {
 
         try {
 
@@ -107,7 +107,7 @@ class Partida {
         return true
     }
 
-    fun comprobarDiagonalPrincipal(jugador: String?): Boolean {
+    private fun comprobarDiagonalPrincipal(jugador: String?): Boolean {
 
         try {
 
@@ -127,7 +127,7 @@ class Partida {
         return true
     }
 
-    fun comprobarDiagonalSecundaria(jugador: String?): Boolean {
+    private fun comprobarDiagonalSecundaria(jugador: String?): Boolean {
 
         try {
 
