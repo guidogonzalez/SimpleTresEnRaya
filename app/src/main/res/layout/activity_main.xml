@@ -30,6 +30,8 @@
                 android:id="@+id/bCelda00"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/boton_circular"
                 android:onClick="@{() -> viewModel.mover(0, 0)}"
                 android:text='@{viewModel.celdas["00"]}'
                 app:layout_column="1"
@@ -41,6 +43,8 @@
                 android:id="@+id/bCelda01"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/boton_circular"
                 android:onClick="@{() -> viewModel.mover(0, 1)}"
                 android:text='@{viewModel.celdas["01"]}'
                 app:layout_column="2"
@@ -52,6 +56,8 @@
                 android:id="@+id/bCelda02"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/boton_circular"
                 android:onClick="@{() -> viewModel.mover(0, 2)}"
                 android:text='@{viewModel.celdas["02"]}'
                 app:layout_column="3"
@@ -63,6 +69,8 @@
                 android:id="@+id/bCelda10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/boton_circular"
                 android:onClick="@{() -> viewModel.mover(1, 0)}"
                 android:text='@{viewModel.celdas["10"]}'
                 app:layout_column="1"
@@ -74,6 +82,8 @@
                 android:id="@+id/bCelda11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/boton_circular"
                 android:onClick="@{() -> viewModel.mover(1, 1)}"
                 android:text='@{viewModel.celdas["11"]}'
                 app:layout_column="2"
@@ -85,6 +95,8 @@
                 android:id="@+id/bCelda12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/boton_circular"
                 android:onClick="@{() -> viewModel.mover(1, 2)}"
                 android:text='@{viewModel.celdas["12"]}'
                 app:layout_column="3"
@@ -96,6 +108,8 @@
                 android:id="@+id/bCelda20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/boton_circular"
                 android:onClick="@{() -> viewModel.mover(2, 0)}"
                 android:text='@{viewModel.celdas["20"]}'
                 app:layout_column="1"
@@ -107,6 +121,8 @@
                 android:id="@+id/bCelda21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/boton_circular"
                 android:onClick="@{() -> viewModel.mover(2, 1)}"
                 android:text='@{viewModel.celdas["21"]}'
                 app:layout_column="2"
@@ -118,6 +134,8 @@
                 android:id="@+id/bCelda22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/boton_circular"
                 android:onClick="@{() -> viewModel.mover(2, 2)}"
                 android:text='@{viewModel.celdas["22"]}'
                 app:layout_column="3"
