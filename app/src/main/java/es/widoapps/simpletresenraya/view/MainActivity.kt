@@ -28,6 +28,8 @@ class MainActivity : AppCompatActivity() {
         partidaViewModel.iniciarPartida()
 
         dataBinding.viewModel = partidaViewModel
+
+        observarViewModel()
     }
 
     private fun observarViewModel() {
@@ -40,6 +42,9 @@ class MainActivity : AppCompatActivity() {
                     if (ganador == null || ganador.isEmpty()) "SIN GANADOR" else ganador
 
                 // Crear el Dialog
+                val dialog = FinPartidaDialog.newInstance(this, ganadorPartida)
+                dialog?.isCancelable = false
+                dialog?.show(supportFragmentManager, "FIN_PARTIDA")
             }
         })
     }
